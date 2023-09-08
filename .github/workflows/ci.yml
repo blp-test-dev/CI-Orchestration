@@ -62,3 +62,11 @@ jobs:
     - name: Find out what the AI thinks about your code
       run: sleep 9s
       shell: bash
+  e2e-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: End-to-end tests
+      run: sleep 32m
+      shell: bash
+    - name: Generic Failure
+      run: exit 1
