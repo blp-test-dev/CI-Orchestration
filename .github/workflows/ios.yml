@@ -1,6 +1,11 @@
 name: iOS
 run-name: iOS CI Pipeline
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "iOs"
+        default: "iOS"
 jobs:
   monetezation:
     runs-on: ubuntu-latest
