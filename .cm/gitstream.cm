@@ -10,7 +10,11 @@ automations:
     run:
       - action: run-github-workflow@v1
         args:
+          owner: {{ repo.owner }}
+          repo: {{ repo.name }}
           workflow: .github/workflows/ios.yml
+          ref: {{ branch.name }}
+          check_name: {{ item.name}}
       - action: add-label@v1
         args:
           label: iOS CI
