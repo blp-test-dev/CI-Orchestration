@@ -1,0 +1,64 @@
+name: Web App
+run-name: Web App CI Pipeline
+on: [push]
+jobs:
+  unecessary-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Why does this exist?
+      run: sleep 10s
+      shell: bash
+  nobody-knows-what-this-is:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Why?
+      run: sleep 8s
+      shell: bash
+  nobody-asked-for-this:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Why me?
+      run: sleep 7s
+      shell: bash
+  why-does-this-keep-happening:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Again, I ask why?
+      run: sleep 6s
+      shell: bash
+  ignore-this:
+    runs-on: ubuntu-latest
+    steps:
+    - name: PLEASE IGNORE
+      run: sleep 5s
+      shell: bash
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Angular build
+      run: sleep 4s
+      shell: bash
+  test-build-1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Gatsby build
+      run: sleep 3s
+      shell: bash
+  test-build-2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Express build
+      run: sleep 2s
+      shell: bash
+  test-build-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Next.js build
+      run: sleep 1s
+      shell: bash
+  ai-overlord:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Find out what the AI thinks about your code
+      run: sleep 9s
+      shell: bash
