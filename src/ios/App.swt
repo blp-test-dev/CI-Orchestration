@@ -1,0 +1,50 @@
+/**
+ A representation of a Pet.
+ 
+ This class encapsulates the properties and behaviors common to pets.
+ 
+ - Author: Ben
+ - Version: 1.0
+ */
+class Pet {
+    
+    /// Represents the name of the pet.
+    private(set) var name: String
+    
+    /// Represents the age of the pet.
+    private(set) var age: Int
+    
+    /// Indicates whether the pet is adopted.
+    private(set) var isAdopted: Bool
+    
+    /**
+     Initializes a new Pet with the given properties.
+     
+     - Parameters:
+        - name: The name of the pet.
+        - age: The age of the pet.
+        - isAdopted: A Boolean value indicating whether the pet has been adopted.
+     */
+    init(name: String, age: Int, isAdopted: Bool) {
+        self.name = name
+        self.age = age
+        self.isAdopted = isAdopted
+    }
+    
+    /**
+     A description of the pet.
+     
+     - Returns: A string representation of the pet.
+     */
+    func describe() -> String {
+        return "\(name) is \(age) years old. \(isAdopted ? "Adopted" : "Not adopted")"
+    }
+}
+
+// Demo
+let whiskers = Pet(name: "Whiskers", age: 3, isAdopted: false)
+print(whiskers.describe())
+
+let buster = Pet(name: "Buster", age: 5, isAdopted: true)
+print(buster.describe())
+
