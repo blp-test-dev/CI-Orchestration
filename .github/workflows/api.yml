@@ -14,4 +14,6 @@ jobs:
     - name: PostgreSQL tests
       run: |
         sleep 5s
-        exit 1
+      shell: bash
+    - name: Generic Failure
+      run: exit 1
