@@ -42,6 +42,8 @@ class Pet {
     }
 }
 
+
+
 // Demo
 let whiskers = Pet(name: "Whiskers", age: 3, isAdopted: false)
 print(whiskers.describe())
