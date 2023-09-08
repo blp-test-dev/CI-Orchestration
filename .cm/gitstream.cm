@@ -17,7 +17,7 @@ automations:
           check_name: {{ item.name}}
       - action: add-github-check@v1
         args:
-          check_name: CI
+          check_name: e2e-tests
           conclusion: skipped
       - action: add-label@v1
         args:
