@@ -31,13 +31,7 @@ app.get('/users', (req, res) => {
     res.json(users);
 });
 
-/**
- * API Endpoint: Get a user by ID.
- * 
- * @name Get User by ID
- * @route {GET} /users/:id
- * @routeparam {number} :id - The ID of the user.
- */
+
 app.get('/users/:id', (req, res) => {
     const user = getUserById(Number(req.params.id));
     if (user) {
