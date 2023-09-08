@@ -12,7 +12,7 @@ automations:
         args:
           owner: {{ repo.owner }}
           repo: {{ repo.name }}
-          workflow: .github/workflows/ios.yml
+          workflow: .github/workflows/test.yml
           ref: {{ branch.name }}
           check_name: {{ item.name}}
       - action: add-label@v1
