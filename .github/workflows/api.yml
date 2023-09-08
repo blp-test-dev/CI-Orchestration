@@ -1,6 +1,6 @@
 name: Android
 run-name: Android CI Pipeline
-on: [push]
+on: [workflow_dispatch]
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"

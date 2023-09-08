@@ -1,6 +1,6 @@
 name: Web Services
 run-name: Web Services CI Pipeline
-on: [push]
+on: [workflow_dispatch]
 jobs:
   node:
     runs-on: ubuntu-latest

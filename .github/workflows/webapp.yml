@@ -1,6 +1,6 @@
 name: Web App
 run-name: Web App CI Pipeline
-on: [push]
+on: [workflow_dispatch]
 jobs:
   react:
     runs-on: ubuntu-latest
