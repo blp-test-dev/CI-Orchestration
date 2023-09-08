@@ -1,0 +1,64 @@
+name: Web Services
+run-name: Web Services CI Pipeline
+on: [push]
+jobs:
+  node:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Node build
+      run: sleep 2m
+      shell: bash
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dependency Scanning
+      run: sleep 13m
+      shell: bash
+  does-it-run-doom:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Doom test
+      run: sleep 27s
+      shell: bash
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Integrations tests
+      run: sleep 33s
+      shell: bash
+  ui:
+    runs-on: ubuntu-latest
+    steps:
+    - name: UI tests
+      run: sleep 2m
+      shell: bash
+  stress-testing:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Stress tests
+      run: sleep 15s
+      shell: bash
+  check-docs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check docs
+      run: sleep 1s
+      shell: bash
+  app-layers:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check app layers
+      run: sleep 6m
+      shell: bash
+  store-layers:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check store layers
+      run: sleep 5m
+      shell: bash
+  spacebar:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check spacebar tempurature
+      run: sleep 50s
+      shell: bash

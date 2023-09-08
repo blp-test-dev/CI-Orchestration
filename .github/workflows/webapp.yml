@@ -1,0 +1,64 @@
+name: Web App
+run-name: Web App CI Pipeline
+on: [push]
+jobs:
+  react:
+    runs-on: ubuntu-latest
+    steps:
+    - name: React build
+      run: sleep 10s
+      shell: bash
+  vue:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Vue build
+      run: sleep 9s
+      shell: bash
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Bootstrap build
+      run: sleep 8s
+      shell: bash
+  svelte:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Svelte build
+      run: sleep 7s
+      shell: bash
+  jquery:
+    runs-on: ubuntu-latest
+    steps:
+    - name: jQuery build
+      run: sleep 6s
+      shell: bash
+  meteor:
+    runs-on: ubuntu-latest
+    steps:
+    - name: UX build
+      run: sleep 5s
+      shell: bash
+  angular:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Angular build
+      run: sleep 4s
+      shell: bash
+  gatsby:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Gatsby build
+      run: sleep 3s
+      shell: bash
+  express:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Express build
+      run: sleep 2s
+      shell: bash
+  nextjs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Next.js build
+      run: sleep 1s
+      shell: bash

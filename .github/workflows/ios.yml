@@ -1,0 +1,10 @@
+name: iOS
+run-name: iOS CI Pipeline
+on: [push]
+jobs:
+  monetezation:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Make money
+      run: sleep 10s
+      shell: bash

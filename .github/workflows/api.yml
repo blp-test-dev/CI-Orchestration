@@ -1,17 +1,74 @@
-name: API
-run-name: API CI Pipeline
+name: Android
+run-name: Android CI Pipeline
 on: [push]
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # This workflow contains a single job called "greet"
   mysql:
     runs-on: ubuntu-latest
     steps:
     - name: MySQL tests
-      run: sleep 2m
+      run: sleep 3m
       shell: bash
+    - name: Generic Failure
+      run: exit 1
   postgresql:
     runs-on: ubuntu-latest
     steps:
     - name: PostgreSQL tests
-      run: |
-        sleep 5s
-        exit 1
+      run: sleep 7m
+      shell: bash
+  nosql:
+    runs-on: ubuntu-latest
+    steps:
+    - name: NoSQL tests
+      run: sleep 27s
+      shell: bash
+  somesql:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SomeSQL tests
+      run: sleep 47s
+      shell: bash
+  load-balancer:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Load balancing tests
+      run: sleep 8m
+      shell: bash
+  diet-balancer:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Diet balancing tests
+      run: sleep 5s
+      shell: bash
+  stress-tester:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Stress tests
+      run: sleep 5s
+      shell: bash
+  strength-tester:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Do you even lift?
+      run: sleep 44s
+      shell: bash
+  chaos-monkey:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Chaos
+      run: sleep 3m
+      shell: bash
+  serentiy-zebra:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Serenity
+      run: sleep 1s
+      shell: bash
+  gnu-koala:
+    runs-on: ubuntu-latest
+    steps:
+    - name: GNU not koala
+      run: sleep 14s
+      shell: bash

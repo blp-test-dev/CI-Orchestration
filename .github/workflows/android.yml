@@ -1,0 +1,58 @@
+name: Android
+run-name: Android CI Pipeline
+on: [push]
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+    - name: frontend tests
+      run: sleep 3m
+      shell: bash
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+    - name: backend tests
+      run: sleep 7m
+      shell: bash
+  topend:
+    runs-on: ubuntu-latest
+    steps:
+    - name: top end tests
+      run: sleep 27s
+      shell: bash
+  rearend:
+    runs-on: ubuntu-latest
+    steps:
+    - name: rear end tests
+      run: sleep 47s
+      shell: bash
+  ui:
+    runs-on: ubuntu-latest
+    steps:
+    - name: UI tests
+      run: sleep 8m
+      shell: bash
+  ux:
+    runs-on: ubuntu-latest
+    steps:
+    - name: UX tests
+      run: sleep 5s
+      shell: bash
+  abc:
+    runs-on: ubuntu-latest
+    steps:
+    - name: ABC to..
+      run: sleep 22s
+      shell: bash
+  xyz:
+    runs-on: ubuntu-latest
+    steps:
+    - name: XYZ
+      run: sleep 58s
+      shell: bash
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Integration tests
+      run: sleep 29s
+      shell: bash
