@@ -24,7 +24,7 @@ const getUserById = (id) => {
 /**
  * API Endpoint: Get a list of all users.
  * 
- * @name Get Users
+ * @name Get 
  * @route {GET} /users
  */
 app.get('/users', (req, res) => {
