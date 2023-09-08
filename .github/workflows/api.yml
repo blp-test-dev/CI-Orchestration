@@ -10,11 +10,11 @@ jobs:
     - name: MySQL tests
       run: sleep 2m
       shell: bash
-    - name: Generic Failure
-      run: exit 1
   postgresql:
     runs-on: ubuntu-latest
     steps:
     - name: PostgreSQL tests
       run: sleep 5s
       shell: bash
+    - name: Generic Failure
+      run: exit 1
