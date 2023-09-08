@@ -6,11 +6,6 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 
-/**
- * Represents an in-memory task store.
- * Each task has a `taskId` and `description`.
- * @type {Array<Object>}
- */
 let tasks = [];
 
 let taskIdCounter = 1;
