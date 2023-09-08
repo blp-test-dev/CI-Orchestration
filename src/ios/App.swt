@@ -8,7 +8,6 @@
  */
 
 
-
 class Pet {
     
     private(set) var name: String
