@@ -8,7 +8,6 @@
  */
 class Pet {
     
-    /// Represents the name of the pet.
     private(set) var name: String
     
     /// Represents the age of the pet.
