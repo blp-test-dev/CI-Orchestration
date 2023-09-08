@@ -10,7 +10,29 @@ let users = [
     { id: 1, name: 'Alice' },
     { id: 2, name: 'Bob' }
 ];
+// Using in-memory storage as an example.
+const storage = [];
 
+// Middlewares
+app.use(bodyParser.json()); // for parsing application/json
+
+// Routes
+app.get('/data', (req, res) => {
+    res.json(storage);
+});
+
+app.post('/data', (req, res) => {
+    const item = req.body;
+    if (!item) {
+        return res.status(400).json({ error: 'No data provided' });
+    }
+    storage.push(item);
+    res.status(201).json({ message: 'Data stored successfully' });
+});
+
+app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+});
 /**
  * Fetches a user by their ID.
  * 
