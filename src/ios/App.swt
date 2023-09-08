@@ -19,7 +19,6 @@ class Pet {
     
     /**
      Initializes a new Pet with the given properties.
-     
      - Parameters:
         - name: The name of the pet.
         - age: The age of the pet.
