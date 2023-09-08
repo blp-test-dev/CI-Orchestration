@@ -32,7 +32,6 @@ class Pet {
     }
     
     /**
-     A description of the pet.
      
      - Returns: A string representation of the pet.
      */
