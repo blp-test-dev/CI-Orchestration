@@ -1,6 +1,6 @@
 name: iOS
 run-name: iOS CI Pipeline
-on: [workflow_dispatch]
+on: workflow_dispatch
 jobs:
   monetezation:
     runs-on: ubuntu-latest
