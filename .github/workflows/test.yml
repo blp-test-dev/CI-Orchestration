@@ -32,7 +32,7 @@ jobs:
       if: always()
       with:
         message: |
-          Howdy ${{ inputs.name }}, the backend build pipeline is turned on for this PR!
+          The API CI pipeline is enabled for this PR!
         message-id: vite
         message-failure: |
           Backend pipeline failed
