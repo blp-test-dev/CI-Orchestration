@@ -15,3 +15,7 @@ automations:
       - action: add-label@v1
         args:
           label: 'API CI'
+      - action: add-github-check@v1
+        args:
+          check_name: e2e-tests
+          conclusion: skipped
