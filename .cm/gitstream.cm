@@ -10,7 +10,7 @@ automations:
     run:
       - action: run-github-workflow@v1
         args:
-          workflow: .github/workflows/api.yml
+          workflow: .github/workflows/test.yml
           check_name: 'API-CI'
       - action: add-label@v1
         args:
