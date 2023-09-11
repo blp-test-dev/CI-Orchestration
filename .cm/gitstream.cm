@@ -4,21 +4,52 @@ manifest:
   version: 1.0
   
 automations:
-  dispatch_action:
+  {% for item in pipelines %}
+  dispatch_action_{{ item.name }}:
     if:
-      - {{ files | match(term='src/ios/') | some }}
+      - {{ files | match(list=item.resources) | some }}
     run:
       - action: run-github-workflow@v1
         args:
           owner: {{ repo.owner }}
-          repo: {{ repo.name }}
-          workflow: .github/workflows/test.yml
+          repo: {{ repo.name}}
+          workflow: .github/workflows/{{ item.workflow }}.yml
           ref: {{ branch.name }}
           check_name: {{ item.name}}
-      - action: add-github-check@v1
-        args:
-          check_name: e2e-tests
-          conclusion: skipped
       - action: add-label@v1
         args:
-          label: iOS CI
+          label: {{ item.label }}
+  {% endfor %}
+
+
+pipelines:
+  - name: android
+    resources:
+      - 'src/android/'
+    workflow: android.yml
+    label: Android CI 
+  - name: ios
+    resources:
+      - 'src/ios/'
+    workflow: ios.yml
+    label: iOS CI 
+  - name: services
+    resources:
+      - 'src/services/'
+    workflow: 'services.yml'
+    label: Web Services CI 
+  - name: api
+    resources:
+      - 'src/api/'
+    workflow: 'api.yml'
+    label: API CI
+  - name: general
+    resources:
+      - 'src/app/'
+    workflow: 'ci.yml'
+    label: General App CI
+  - name: general
+    resources:
+      - 'src/app/'
+    workflow: 'ci.yml'
+    label: General App CI
