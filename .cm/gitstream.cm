@@ -19,3 +19,7 @@ automations:
         args:
           check_name: e2e-tests
           conclusion: skipped
+
+# - {{ pr.labels | match(term='API CI') | some }}
+# - {{ branch.name | includes(term='api') }}
+# - {{ pr.target | includes(term='api') }}
