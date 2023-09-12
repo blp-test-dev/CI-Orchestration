@@ -4,7 +4,7 @@ manifest:
   version: 1.0
   
 automations:
-  dispatch_action_{{ item.name }}:
+  dispatch_api_ci:
     if:
       - {{ files | match(term='src/api') | some }}
     run:
