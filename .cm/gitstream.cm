@@ -2,24 +2,38 @@
 
 manifest:
   version: 1.0
-
-on:
-  - pr_created
-  - commit
-
+  
 automations:
-  skip_github_action:
+  {% for item in pipelines %}
+  dispatch_github_action_{{ item.name }}:
     if:
-      - {{ files | match(term='docs/') | every }}
+      - {{ files | match(list=item.resources) | some }}
     run:
-      - action: add-github-check@v1
+      - action: run-github-workflow@v1
         args:
-          check_name: release-ci
-          conclusion: skipped
-      - action: add-github-check@v1
+          workflow: .github/workflows/{{ item.workflow }}
+          check_name: {{ item.name }}
+      - action: add-label@v1
         args:
-          check_name: mobile-ci
-          conclusion: skipped
-      - action: add-comment@v1
-        args:
-          comment: '[gitStream](https://docs.gitstream.cm) automatically skipped production CI pipelines because this PR only contains docs changes.'
+          label: {{ item.label }}
+  {% endfor %}
+
+
+pipelines:
+  - name: mobile-build
+    resources:
+      - 'src/android/'
+      - 'src/ios/'
+    workflow: mobile.yml
+    label: Mobile Build 
+  - name: backend-build
+    resources:
+      - 'src/api/'
+      - 'src/app'
+    workflow: 'backend.yml'
+    label: Backend Build 
+  - name: frontend-build
+    resources:
+      - 'src/app/ui'
+    workflow: 'frontend.yml'
+    label: Frontend Build
