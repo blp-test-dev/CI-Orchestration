@@ -1,4 +1,4 @@
-# -*- mode: yaml -*-
+i# -*- mode: yaml -*-
 
 manifest:
   version: 1.0
@@ -29,11 +29,11 @@ pipelines:
   - name: backend-build
     resources:
       - 'src/api/'
-      - 'src/app'
+      - 'src/services'
     workflow: 'backend.yml'
     label: Backend Build 
   - name: frontend-build
     resources:
-      - 'src/app/ui'
+      - 'src/app/'
     workflow: 'frontend.yml'
     label: Frontend Build
