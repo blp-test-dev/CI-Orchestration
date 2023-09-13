@@ -11,12 +11,6 @@ let users = [
     { id: 2, name: 'Bob' }
 ];
 
-/**
- * Fetches a user by their ID.
- * 
- * @param {number} id - The ID of the user.
- * @returns {Object|null} The user object or null if not found.
- */
 const getUserById = (id) => {
     return users.find(user => user.id === id) || null;
 };
