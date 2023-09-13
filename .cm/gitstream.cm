@@ -7,21 +7,19 @@ on:
   - pr_created
   - commit
 
-# Update this list to match the names of the GitHub Actions workflows you want to skip
-prod-ci-pipelines:
-  - 'e2e-tests'
-
 automations:
   skip_github_action:
     if:
       - {{ files | match(term='docs/') | every }}
     run:
-      {% for item in prod-ci-pipelines %}
       - action: add-github-check@v1
         args:
-          check_name: {{ item }}
+          check_name: release-ci
           conclusion: skipped
-      {% endfor %}
+      - action: add-github-check@v1
+        args:
+          check_name: mobile-ci
+          conclusion: skipped
       - action: add-comment@v1
         args:
-          comment: '[gitStream](docs.gitstream.cm) automatically skipped production CI pipelines because this PR only contains docs changes.'
+          comment: '[gitStream](https://docs.gitstream.cm) automatically skipped production CI pipelines because this PR only contains docs changes.'
