@@ -1,7 +1,6 @@
 ---
 # **TechStack 3000 Documentation**
 
-Welcome to the official documentation for TechStack 3000, the future of web development platforms!
 
 ---
 
