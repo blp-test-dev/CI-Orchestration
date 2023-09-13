@@ -1,11 +1,4 @@
-/**
- A representation of a Pet.
- 
- This class encapsulates the properties and behaviors common to pets.
- 
- - Author: Ben
- - Version: 1.0
- */
+
 class Pet {
     
     /// Represents the name of the pet.
