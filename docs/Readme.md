@@ -24,7 +24,6 @@ Before diving into TechStack 3000, we recommend getting acquainted with some fun
 - [Key Features](getting-started/key-features.md)
 
 [Read more →](getting-started/)
-
 ---
 
 ## **Installation**
