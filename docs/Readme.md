@@ -1,7 +1,6 @@
 ---
 # **TechStack 3000 Documentation**
 
-Welcome to the official documentation for TechStack 3000, the future of web development platforms!
 
 ---
 
@@ -25,7 +24,6 @@ Before diving into TechStack 3000, we recommend getting acquainted with some fun
 - [Key Features](getting-started/key-features.md)
 
 [Read more →](getting-started/)
-
 ---
 
 ## **Installation**
