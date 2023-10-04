@@ -7,9 +7,7 @@
  */
 public class Book {
 
-    /**
-     * The title of the book.
-     */
+
     private String title;
 
     /**
