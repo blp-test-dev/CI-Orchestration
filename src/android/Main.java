@@ -1,10 +1,4 @@
-/**
- * Represents a Book with a title, author, and number of pages.
- * <p>
- * This class provides basic methods to retrieve and modify the properties
- * of the book.
- * </p>
- */
+
 public class Book {
 
     /**
@@ -17,9 +11,6 @@ public class Book {
      */
     private String author;
 
-    /**
-     * The number of pages in the book.
-     */
     private int pages;
 
     /**
