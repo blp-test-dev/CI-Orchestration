@@ -48,3 +48,32 @@ print(whiskers.describe())
 let buster = Pet(name: "Buster", age: 5, isAdopted: true)
 print(buster.describe())
 
+class Kitten {
+    var name: String
+    var color: String
+    var age: Int
+    var weight: Double // in kg
+    var isAdopted: Bool
+
+    init(name: String, color: String, age: Int, weight: Double, isAdopted: Bool = false) {
+        self.name = name
+        self.color = color
+        self.age = age // age in months for kittens
+        self.weight = weight
+        self.isAdopted = isAdopted
+    }
+
+    func meow() {
+        print("\(name) says: Meow!")
+    }
+
+    func describe() -> String {
+        let adoptedStatus = isAdopted ? "adopted" : "not adopted"
+        return "\(name) is a \(color) kitten, \(age) months old, weighs \(weight)kg and is \(adoptedStatus)."
+    }
+}
+
+// Usage
+let whiskers = Kitten(name: "Whiskers", color: "gray", age: 3, weight: 0.5)
+whiskers.meow()
+print(whiskers.describe())
