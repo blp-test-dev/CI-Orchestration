@@ -11,9 +11,6 @@ public class Book {
      */
     private String author;
 
-    /**
-     * The number of pages in the book.
-     */
     private int pages;
 
     /**
